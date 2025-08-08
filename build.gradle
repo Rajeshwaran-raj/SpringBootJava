@@ -9,8 +9,8 @@ version = '0.0.1-SNAPSHOT'
 description = 'Course Registration System'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_20     // ✅ This is the right way to set Java version
-    targetCompatibility = JavaVersion.VERSION_20
+    sourceCompatibility = JavaVersion.VERSION_21     // ✅ This is the right way to set Java version
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 repositories {
