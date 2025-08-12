@@ -1,10 +1,19 @@
-HELP.md
+# Gradle build directories
+/build/
+/out/
+
+# Gradle wrapper jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Target folders in subprojects or Maven builds (if any)
 target/
-!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# Gradle cache files (optional, usually local)
+.gradle/
+
+# STS (Spring Tool Suite) files
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +22,23 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IntelliJ IDEA files
+.idea/
 *.iml
+*.iws
 *.ipr
 
-### NetBeans ###
+# NetBeans files
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code files
 .vscode/
+
+# Other typical ignores
+*.log
+*.class
+.DS_Store
