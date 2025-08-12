@@ -1,33 +1,50 @@
-HELP.md
-target/
+# Gradle build directory
+/build/
+/**/build/
+
+# Gradle wrapper jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle caches
+/.gradle/
+
+# Maven wrapper (if you have it)
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Ignore Eclipse files
+/.classpath
+/.project
+/.settings/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# Ignore IntelliJ IDEA files
+/.idea/
+/*.iml
+/*.iws
+/*.ipr
 
-### NetBeans ###
+# Ignore VS Code settings folder
+/.vscode/
+
+# Ignore STS (Spring Tool Suite) files
+/.apt_generated
+/.factorypath
+/.springBeans
+/.sts4-cache
+
+# Ignore NetBeans files
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# Ignore target folders (Maven or others)
+/target/
+/**/target/
+
+# Keep source builds if you want (optional)
+/**/src/main/**/build/
+/**/src/test/**/build/
+
+# Ignore help file
+HELP.md
