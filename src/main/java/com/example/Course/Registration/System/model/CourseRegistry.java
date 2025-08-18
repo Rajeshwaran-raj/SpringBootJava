@@ -1,26 +1,34 @@
 package com.example.Course.Registration.System.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection = "course_registry")
 public class CourseRegistry {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id; //No need to provide value
+    private String id; // MongoDB ID (usually ObjectId)
 
     private String name;
     private String emailId;
     private String courseName;
 
-    public int getId() {
+    public CourseRegistry() {
+        // Default constructor for Spring Data
+    }
+
+    public CourseRegistry(String name, String emailId, String courseName) {
+        this.name = name;
+        this.emailId = emailId;
+        this.courseName = courseName;
+    }
+
+    // Getters and setters
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -46,15 +54,5 @@ public class CourseRegistry {
 
     public void setCourseName(String courseName) {
         this.courseName = courseName;
-    }
-
-    public CourseRegistry(String name, String emailId, String courseName) {
-        this.name = name;
-        this.emailId = emailId;
-        this.courseName = courseName;
-    }
-
-    public CourseRegistry(){
-
     }
 }
