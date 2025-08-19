@@ -40,6 +40,18 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Mongock for MongoDB migrations -->
+        <dependency>
+            <groupId>io.mongock</groupId>
+            <artifactId>mongock-springboot</artifactId>
+            <version>5.4.4</version>
+        </dependency>   
+        <dependency>
+            <groupId>io.mongock</groupId>
+            <artifactId>mongock-springboot-v3</artifactId>
+            <version>5.4.4</version>
+        </dependency>
+
     </dependencies>
 
     <build>

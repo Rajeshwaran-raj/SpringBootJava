@@ -6,3 +6,5 @@ spring.datasource.password = Raj300602@
 spring.jpa.show-sql = true
 spring.jpa.hibernate.ddl-auto = update
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
+# spring.data.mongodb.uri=mongodb://localhost:27017/
+
