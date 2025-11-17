@@ -8,12 +8,11 @@ A simple **Spring Boot + MySQL** application for managing courses and course reg
 
 ### 1️⃣ Create the Database
 
-```sql
 CREATE DATABASE course_reg_sym;
 2️⃣ Insert Seed Data (Run After Application Starts)
 The tables will be automatically created by Spring Boot, so you only need to run the insert commands:
 
-sql
+
 INSERT INTO `course_reg_sym`.`course`
 (`course_id`, `course_name`, `duration_in_weeks`, `trainer`)
 VALUES
@@ -28,7 +27,7 @@ VALUES
 (8, 'Database Design with MySQL', 5, 'Suman Rao'),
 (9, 'Cybersecurity Basics', 4, 'Deepak Sen');
 
-📌 API Endpoints
+## 📌 API Endpoints
 Replace {url} with your base server URL
 (e.g., http://localhost:8080 or deployed URL)
 
@@ -43,14 +42,14 @@ POST {url}/courses/register?name={name}&emailId={emailId}&courseName={courseName
 Example:
 POST {url}/courses/register?name=sanjeev&emailId=sanjeev@example.com&courseName=MERN%20Stack
 
-⚙️ Running the Application
+## ⚙️ Running the Application
 ▶️ Start the Spring Boot App
 ./mvnw spring-boot:run
 
 🏗️ Build the Project
 ./mvnw clean install
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 Java
 Spring Boot
 MySQL
