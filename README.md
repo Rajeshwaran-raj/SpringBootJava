@@ -12,7 +12,7 @@ CREATE DATABASE course_reg_sym;
 2️⃣ Insert Seed Data (Run After Application Starts)
 The tables will be automatically created by Spring Boot, so you only need to run the insert commands:
 
-
+```sql
 INSERT INTO `course_reg_sym`.`course`
 (`course_id`, `course_name`, `duration_in_weeks`, `trainer`)
 VALUES
@@ -26,6 +26,7 @@ VALUES
 (7, 'DevOps Essentials', 6, 'Ravi Nair'),
 (8, 'Database Design with MySQL', 5, 'Suman Rao'),
 (9, 'Cybersecurity Basics', 4, 'Deepak Sen');
+```
 
 ## 📌 API Endpoints
 Replace {url} with your base server URL
