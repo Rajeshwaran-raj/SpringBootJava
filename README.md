@@ -52,7 +52,7 @@ POST {url}/courses/register?name=sanjeev&emailId=sanjeev@example.com&courseName=
 ./mvnw clean install
 
 ## 🛠️ Tech Stack
-Java
-Spring Boot
-MySQL
-Maven
+Java<br>
+Spring Boot<br>
+MySQL<br>
+Maven<br>
