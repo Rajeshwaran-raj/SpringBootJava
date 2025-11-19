@@ -34,15 +34,25 @@ Replace {url} with your base server URL
 (e.g., http://localhost:8080 or deployed URL)
 
 ▶️ Get All Courses
-GET {url}/courses
+GET 
+```endpoint
+{url}/courses
+```
 
 ▶️ Get All Enrolled Students
+```endpoint
 GET {url}/courses/enrolled
+```
 
 ▶️ Register for a Course
-POST {url}/courses/register?name={name}&emailId={emailId}&courseName={courseName}
+```endpoint
+
+POST {url}/courses/register?name={name}&emailId={emailId}&courseName={courseName}`
+```
 Example:
+```endpoint
 POST {url}/courses/register?name=sanjeev&emailId=sanjeev@example.com&courseName=MERN%20Stack
+```
 
 ## ⚙️ Running the Application
 ▶️ Start the Spring Boot App
