@@ -39,42 +39,70 @@ out/
 
 .vscode/
 
-# ==================================
+# =========================
 # Spring Boot Sensitive Files
-# ==================================
-application.properties
-application.yml
-application-*.properties
-application-*.yml
+# =========================
 
-# Environment
+# Ignore root-level properties/yml files
+/application.properties
+/application.yml
+/application-*.properties
+/application-*.yml
+
+# Environment files
 .env
 *.env
 
-# ==================================
-# OS Files
-# ==================================
+# =========================
+# Gradle Specific
+# =========================
+
+# Gradle cache & metadata (includes cache.properties)
+.gradle/
+
+# Build output
+build/
+**/build/
+
+# Local gradle properties (may contain credentials)
+gradle.properties
+
+# =========================
+# Build Artifacts
+# =========================
+*.class
+*.jar
+*.war
+*.ear
+
+# =========================
+# Temporary & Backup Files
+# =========================
+*.tmp
+*.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
 
+# =========================
+# IDE Files
+# =========================
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# =========================
 # Logs
-logs/
+# =========================
 *.log
-
-# Temporary files
-*.tmp
-*.swp
-
-
-
-# Maven build artifacts
-target/
-**/target/
-
-# Ignore pom.properties and pom.xml.tag etc.
-pom.properties
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
+logs/
