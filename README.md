@@ -7,8 +7,9 @@ A simple **Spring Boot + MySQL** application for managing courses and course reg
 ## 📌 Database Setup
 
 ### 1️⃣ Create the Database
-
+```sql
 CREATE DATABASE course_reg_sym;
+```
 2️⃣ Insert Seed Data (Run After Application Starts)
 The tables will be automatically created by Spring Boot, so you only need to run the insert commands:
 
