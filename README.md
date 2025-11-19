@@ -46,10 +46,14 @@ POST {url}/courses/register?name=sanjeev&emailId=sanjeev@example.com&courseName=
 
 ## ⚙️ Running the Application
 ▶️ Start the Spring Boot App
+```bash
 ./mvnw spring-boot:run
+```
 
 🏗️ Build the Project
+```bash
 ./mvnw clean install
+```
 
 ## 🛠️ Tech Stack
 Java<br>
