@@ -1,11 +1,17 @@
-# SpringBootJava
+# 📚 Spring Boot Java – Course Registration System
 
-**Create DB** in MySQL:
-```sql
-CREATE DATABASE course_reg_sym
-```
+A simple **Spring Boot + MySQL** application for managing courses and course registrations.
 
-**Insert Queries** for "course" Table
+---
+
+## 📌 Database Setup
+
+### 1️⃣ Create the Database
+
+CREATE DATABASE course_reg_sym;
+2️⃣ Insert Seed Data (Run After Application Starts)
+The tables will be automatically created by Spring Boot, so you only need to run the insert commands:
+
 ```sql
 INSERT INTO `course_reg_sym`.`course`
 (`course_id`, `course_name`, `duration_in_weeks`, `trainer`)
@@ -20,5 +26,32 @@ VALUES
 (7, 'DevOps Essentials', 6, 'Ravi Nair'),
 (8, 'Database Design with MySQL', 5, 'Suman Rao'),
 (9, 'Cybersecurity Basics', 4, 'Deepak Sen');
-
 ```
+
+## 📌 API Endpoints
+Replace {url} with your base server URL
+(e.g., http://localhost:8080 or deployed URL)
+
+▶️ Get All Courses
+GET {url}/courses
+
+▶️ Get All Enrolled Students
+GET {url}/courses/enrolled
+
+▶️ Register for a Course
+POST {url}/courses/register?name={name}&emailId={emailId}&courseName={courseName}
+Example:
+POST {url}/courses/register?name=sanjeev&emailId=sanjeev@example.com&courseName=MERN%20Stack
+
+## ⚙️ Running the Application
+▶️ Start the Spring Boot App
+./mvnw spring-boot:run
+
+🏗️ Build the Project
+./mvnw clean install
+
+## 🛠️ Tech Stack
+Java
+Spring Boot
+MySQL
+Maven

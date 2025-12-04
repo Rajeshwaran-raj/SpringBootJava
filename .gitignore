@@ -43,3 +43,30 @@ src/main/resources/application.properties
 src/main/resources/application.yml
 src/main/resources/application-*.properties
 src/main/resources/application-*.yml
+
+
+# =========================
+# Spring Boot Sensitive Files
+# =========================
+
+# Ignore root-level properties files
+/application.properties
+/application.yml
+/application-*.properties
+/application-*.yml
+
+# Environment files
+.env
+*.env
+
+# =========================
+# Build Artifacts
+# =========================
+*.class
+*.jar
+*.war
+*.ear
+
+# Temporary files
+*.tmp
+*.swp
