@@ -48,3 +48,16 @@
 
 # Ignore help file
 HELP.md
+
+
+# Spring Boot application config
+application.properties
+application.yml
+application-*.properties
+application-*.yml
+
+# If located in src/main/resources
+src/main/resources/application.properties
+src/main/resources/application.yml
+src/main/resources/application-*.properties
+src/main/resources/application-*.yml
