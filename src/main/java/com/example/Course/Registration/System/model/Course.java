@@ -1,46 +1,42 @@
 package com.example.Course.Registration.System.model;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
 public class Course {
-    @Id
-    private String courseId;
-    private String courseName;
-    private String trainer;
-    private int durationInWeeks;
 
-    public String getCourseId() {
-        return courseId;
+    private int id;
+    private String name;
+    private String description;
+
+    public Course() {
+        // default constructor
     }
 
-    public void setCourseId(String courseId) {
-        this.courseId = courseId;
+    public Course(int id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
     }
 
-    public String getCourseName() {
-        return courseName;
+    public int getId() {
+        return id;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getTrainer() {
-        return trainer;
+    public String getName() {
+        return name;
     }
 
-    public void setTrainer(String trainer) {
-        this.trainer = trainer;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getDurationInWeeks() {
-        return durationInWeeks;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDurationInWeeks(int durationInWeeks) {
-        this.durationInWeeks = durationInWeeks;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
