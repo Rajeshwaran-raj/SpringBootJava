@@ -1,35 +1,25 @@
 package com.example.Course.Registration.System.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
 public class CourseRegistry {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id; //No need to provide value
-
-    private String name;
+    private String studentName;
     private String emailId;
     private String courseName;
 
-    public int getId() {
-        return id;
+    public CourseRegistry() {}
+
+    public CourseRegistry(String studentName, String emailId, String courseName) {
+        this.studentName = studentName;
+        this.emailId = emailId;
+        this.courseName = courseName;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public String getEmailId() {
@@ -46,15 +36,5 @@ public class CourseRegistry {
 
     public void setCourseName(String courseName) {
         this.courseName = courseName;
-    }
-
-    public CourseRegistry(String name, String emailId, String courseName) {
-        this.name = name;
-        this.emailId = emailId;
-        this.courseName = courseName;
-    }
-
-    public CourseRegistry(){
-
     }
 }

@@ -1,63 +1,93 @@
-# Gradle build directory
+# ---------------------------
+# Gradle build directories
+# ---------------------------
 /build/
 /**/build/
 
-# Gradle wrapper jar
-!gradle/wrapper/gradle-wrapper.jar
+# Gradle wrapper (keep only JAR)
+/gradle/
+/!gradle/wrapper/
+/!gradle/wrapper/gradle-wrapper.jar
 
+# ---------------------------
 # Gradle caches
+# ---------------------------
 /.gradle/
+.gradle/
+/.gradle/**
 
-# Maven wrapper (if you have it)
+# Ignore Gradle cache binary files explicitly
+.gradle/**/*.bin
+.gradle/**/*.lock
+.gradle/**/fileHashes/
+.gradle/**/outputFiles/
+.gradle/**/buildOutputCleanup/
+.gradle/**/resourceHashes*/
+
+# ---------------------------
+# Maven wrapper (if present)
+# ---------------------------
 !.mvn/wrapper/maven-wrapper.jar
 
-# Ignore Eclipse files
-/.classpath
-/.project
-/.settings/
+# ---------------------------
+# Eclipse files
+# ---------------------------
+.classpath
+.project
+.settings/
 
-# Ignore IntelliJ IDEA files
-/.idea/
-/*.iml
-/*.iws
-/*.ipr
+# ---------------------------
+# IntelliJ Idea
+# ---------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
 
-# Ignore VS Code settings folder
-/.vscode/
+# ---------------------------
+# VS Code
+# ---------------------------
+.vscode/
 
-# Ignore STS (Spring Tool Suite) files
-/.apt_generated
-/.factorypath
-/.springBeans
-/.sts4-cache
+# ---------------------------
+# STS
+# ---------------------------
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
 
-# Ignore NetBeans files
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# ---------------------------
+# NetBeans
+# ---------------------------
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
-# Ignore target folders (Maven or others)
+# ---------------------------
+# Maven target
+# ---------------------------
 /target/
 /**/target/
 
-# Keep source builds if you want (optional)
-/**/src/main/**/build/
-/**/src/test/**/build/
-
-# Ignore help file
-HELP.md
-
-
-# Spring Boot application config
+# ---------------------------
+# Spring Boot Config Files
+# ---------------------------
 application.properties
 application.yml
 application-*.properties
 application-*.yml
 
-# If located in src/main/resources
+# If located under resources
 src/main/resources/application.properties
 src/main/resources/application.yml
 src/main/resources/application-*.properties
 src/main/resources/application-*.yml
+
+# ---------------------------
+# Misc
+# ---------------------------
+HELP.md

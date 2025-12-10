@@ -1,33 +1,37 @@
 package com.example.Course.Registration.System.service;
 
-import com.example.Course.Registration.System.model.Course;
-import com.example.Course.Registration.System.model.CourseRegistry;
-import com.example.Course.Registration.System.repository.CourseRegistryRepo;
-import com.example.Course.Registration.System.repository.CourseRepo;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.example.Course.Registration.System.model.Course;
+import com.example.Course.Registration.System.model.CourseRegistry;
 
 @Service
 public class CourseService {
 
-    @Autowired
-    CourseRepo courseRepo;
+    private final List<Course> courseList = new ArrayList<>();
+    private final List<CourseRegistry> courseRegistryList = new ArrayList<>();
 
-    @Autowired
-    CourseRegistryRepo courseRegistryRepo;
+    public CourseService() {
+
+        // Pre-loaded sample courses
+        courseList.add(new Course(1, "Java Basics", "Introduction to Java"));
+        courseList.add(new Course(2, "Spring Boot", "Learn Spring Boot REST"));
+        courseList.add(new Course(3, "Python Fundamentals", "Python from scratch"));
+    }
 
     public List<Course> availableCourses() {
-        return courseRepo.findAll();
+        return courseList;
     }
 
     public List<CourseRegistry> enrolledStudents() {
-        return courseRegistryRepo.findAll();
+        return courseRegistryList;
     }
 
     public void enrollCourse(String name, String emailId, String courseName) {
-        CourseRegistry courseRegistry = new CourseRegistry(name,emailId,courseName);
-        courseRegistryRepo.save(courseRegistry);
+        CourseRegistry registry = new CourseRegistry(name, emailId, courseName);
+        courseRegistryList.add(registry);
     }
 }
